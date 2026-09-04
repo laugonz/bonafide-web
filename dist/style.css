@@ -31,7 +31,7 @@ h2 { font-family: Georgia, serif; line-height: 1.15; font-size: clamp(1.8rem, 3v
 .facts strong { font-size: 2rem; color: var(--green); }
 .facts p, .cards p { color: var(--muted); margin-bottom: 0; }
 .cards > a { color: var(--ink); text-decoration: none; }
-.cards > a img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 12px; margin: -2px 0 18px; }
+.cards > a img { display: block; width: 100%; height: auto; aspect-ratio: auto; object-fit: contain; border-radius: 12px; margin: -2px 0 18px; }
 .cards h3 { margin-top: 0; }
 .cards span { display: block; color: var(--green); font-weight: 700; margin-top: 18px; }
 .split { display: grid; grid-template-columns: .55fr 1fr; align-items: center; gap: 70px; }
