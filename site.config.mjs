@@ -1,6 +1,6 @@
 export const site = {
   name: "Bona Fide",
-  url: "https://bonafide-web.vercel.app",
+  url: "https://bonafidesie.com",
   // Replace this before launch. The app is still in App Review, so an invented
   // App Store identifier would create a broken conversion path.
   appStoreUrl: "",

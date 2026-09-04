@@ -7,4 +7,4 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-Sitemap: https://bonafide-web.vercel.app/sitemap.xml
+Sitemap: https://bonafidesie.com/sitemap.xml
