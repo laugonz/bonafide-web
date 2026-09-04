@@ -46,7 +46,7 @@ h2 { font-family: Georgia, serif; line-height: 1.15; font-size: clamp(1.8rem, 3v
 footer { color: var(--muted); font-size: .85rem; border-top: 1px solid var(--line); }
 .article { max-width: 790px; margin: 0 auto; padding: 72px 0; }
 .article figure { margin: 42px 0; }
-.article figure img { display: block; max-width: 330px; border-radius: 28px; box-shadow: 0 20px 60px #16223c22; }
+.article figure img { display: block; width: auto; max-width: min(330px, 100%); height: auto; border-radius: 28px; box-shadow: 0 20px 60px #16223c22; }
 .article figure.feature { margin-top: 0; }
 .article figure.feature img { display: block; width: 100%; max-width: none; height: auto; aspect-ratio: auto; object-fit: contain; border-radius: 20px; box-shadow: none; }
 .article figcaption { font-size: .82rem; color: var(--muted); margin-top: 9px; }
@@ -65,7 +65,7 @@ footer { color: var(--muted); font-size: .85rem; border-top: 1px solid var(--lin
   .facts, .cards, .guides { grid-template-columns: 1fr; }
   .split img { max-width: 280px; }
   .article { padding: 46px 0; }
-  .article figure img { max-width: 280px; }
+  .article figure img { width: auto; max-width: min(280px, 100%); height: auto; }
   .article figure.feature img { width: 100%; max-width: none; height: auto; }
   section { padding: 46px 0; }
   footer { display: block; }
