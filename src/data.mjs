@@ -16,7 +16,7 @@ export const guides = [
     intro: "Start with the official FINRA outline, then make your study time follow the exam's weighting. Products and Risks is 44% of the SIE, so it deserves more practice than a small section even if it feels less familiar. Add daily mixed questions early, and use full mocks later to test timing.",
     screenshot: "home.jpg",
     screenshotAlt: "Bona Fide home screen with exam countdown, daily practice and readiness score",
-    featureImage: "sie-exam-study-plan-feature.png",
+    featureImage: "sie-exam-study-plan-feature.jpg",
     featureAlt: "SIE exam candidate planning study time at a desk with a calendar and tablet",
     sections: [
       ["Map the four SIE domains before making a calendar", "The SIE has four domains: Capital Markets (16%), Products and Risks (44%), Trading and Customer Accounts (31%), and Regulatory Framework (9%). Use those proportions to decide where your hours go. A plan that gives every topic the same time will underprepare the two sections that make up three quarters of the test."],
@@ -32,7 +32,7 @@ export const guides = [
     intro: "SIE practice questions work best when each wrong answer changes what you do next. Identify the tested rule, read why your choice fails, and then return to that topic in a later mixed set. Repeating a familiar question until you recognize it is much less useful than explaining the rule in a new scenario.",
     screenshot: "quiz.jpg",
     screenshotAlt: "Bona Fide multiple-choice SIE practice question about market manipulation",
-    featureImage: "sie-practice-questions-feature.png",
+    featureImage: "sie-practice-questions-feature.jpg",
     featureAlt: "Learner comparing abstract answer cards while studying for a securities exam",
     sections: [
       ["Read the whole fact pattern first", "Many SIE questions turn on a word such as primary, secondary, discretionary, or prohibited. Before scanning choices, ask what the question is actually testing. This makes distractors easier to eliminate and builds the habit needed when the wording changes on the real exam."],
@@ -48,7 +48,7 @@ export const guides = [
     intro: "For a useful SIE practice exam, use 75 questions and a 105-minute clock, then review the result by domain. The point is not to recreate every detail of the real test. It is to see whether you can make decisions at pace, find weak areas, and revise your plan before exam day.",
     screenshot: "mock.jpg",
     screenshotAlt: "Bona Fide timed 75-question SIE mock exam screen",
-    featureImage: "sie-practice-exam-feature.png",
+    featureImage: "sie-practice-exam-feature.jpg",
     featureAlt: "Timed exam desk with an analog timer, answer sheets and pencil",
     sections: [
       ["Make the first mock a clean baseline", "Block 105 minutes, put away notes, and answer every question yourself. Flag uncertain items rather than spending several minutes on one. A baseline only helps if it shows what you know unaided."],
@@ -64,7 +64,7 @@ export const guides = [
     intro: "A readiness score is useful when it points to a concrete next task: practice Products and Risks, revisit trading rules, or take a timed mock. It should not be treated as an official prediction. FINRA does not publish the SIE cut-score calculation, and practice results always depend on the questions you happened to see.",
     screenshot: "readiness.jpg",
     screenshotAlt: "Bona Fide readiness screen with overall score and domain performance bars",
-    featureImage: "sie-exam-readiness-score-feature.png",
+    featureImage: "sie-exam-readiness-score-feature.jpg",
     featureAlt: "Candidate studying a wall of four abstract progress bars",
     sections: [
       ["Look below the headline number", "An overall percentage can hide a large weakness in a high-weighted area. Bona Fide shows the four domains separately and calls out the one losing the most potential points, so the number turns into a study decision."],
@@ -80,7 +80,7 @@ export const guides = [
     intro: "The FINRA SIE content outline divides the exam into four domains. Understanding Products and Their Risks is the largest at 44%, followed by Trading, Customer Accounts and Prohibited Activities at 31%. Use that weighting to guide practice, while still covering all four areas before test day.",
     screenshot: "home.jpg",
     screenshotAlt: "Bona Fide home screen highlighting Products and Risks as the study focus",
-    featureImage: "sie-exam-outline-feature.png",
+    featureImage: "sie-exam-outline-feature.jpg",
     featureAlt: "Four differently sized stacks of study cards representing the SIE outline",
     sections: [
       ["Capital Markets: 16%", "This domain covers market structure, offerings, economic factors, and the roles of regulators and participants. It is smaller than Products and Risks, but it supplies core vocabulary used in later questions."],
@@ -96,7 +96,7 @@ export const guides = [
     intro: "Products and Risks is 44% of the SIE, so it is usually the best place to spend extra study time. Learn each product by comparing its features, investor fit, tax treatment, liquidity and risk. Then practice choosing between similar concepts in question form.",
     screenshot: "tutor.jpg",
     screenshotAlt: "Bona Fide explanation and tutor conversation after an incorrect SIE answer",
-    featureImage: "products-and-risks-sie-feature.png",
+    featureImage: "products-and-risks-sie-feature.jpg",
     featureAlt: "Study still life with a coin, magnifying glass and blank financial paper",
     sections: [
       ["Study comparisons instead of isolated definitions", "A definition alone is rarely enough. Put securities side by side: common stock and preferred stock, open-end funds and closed-end funds, bonds and bond funds. Ask what changes when rates move, who carries risk, and how an investor can sell."],
