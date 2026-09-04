@@ -1,0 +1,26 @@
+# Bona Fide
+
+> Bona Fide is an independent iPhone and iPad study app for the FINRA Securities Industry Essentials (SIE) exam. It provides practice questions, answer rationales, a readiness estimate across the four FINRA domains, a timed 75-question mock exam, and a contextual AI tutor for explaining missed practice questions.
+
+## Product facts
+
+- Audience: adults preparing for the FINRA SIE exam.
+- Scope: study support, not official FINRA material, financial advice, or a guarantee of an exam result.
+- Content: 1,600+ practice questions written to the 2026 FINRA outline and updated when rules change.
+- Exam format used in the app: 75 questions, 105 minutes, and FINRA's published domain allocation.
+- Devices: iPhone and iPad.
+- Privacy: no account or advertising tracking. Study progress remains on the device.
+- Availability: App Store link will be added when the current App Review is complete.
+
+## Key pages
+
+- /guides/sie-exam-study-plan/ — study planning by test date and domain weighting.
+- /guides/sie-practice-questions/ — review loop for practice questions and explanations.
+- /guides/sie-practice-exam/ — how to use a timed mock exam.
+- /guides/sie-exam-readiness-score/ — appropriate use and limits of readiness estimates.
+- /guides/sie-exam-outline/ — FINRA's four SIE domains and question allocation.
+- /guides/products-and-risks-sie/ — study approach for the largest SIE domain.
+
+## Primary source
+
+FINRA publishes the authoritative SIE exam information and content outline: https://www.finra.org/registration-exams-ce/qualification-exams/securities-industry-essentials-exam-sie
