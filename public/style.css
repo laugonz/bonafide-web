@@ -48,7 +48,7 @@ footer { color: var(--muted); font-size: .85rem; border-top: 1px solid var(--lin
 .article figure { margin: 42px 0; }
 .article figure img { display: block; max-width: 330px; border-radius: 28px; box-shadow: 0 20px 60px #16223c22; }
 .article figure.feature { margin-top: 0; }
-.article figure.feature img { width: 100%; max-width: none; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 20px; box-shadow: none; }
+.article figure.feature img { display: block; width: 100%; max-width: none; height: auto; aspect-ratio: auto; object-fit: contain; border-radius: 20px; box-shadow: none; }
 .article figcaption { font-size: .82rem; color: var(--muted); margin-top: 9px; }
 .article section { padding: 30px 0; border: 0; }
 .article section h2 { font-size: 2rem; }
@@ -66,6 +66,7 @@ footer { color: var(--muted); font-size: .85rem; border-top: 1px solid var(--lin
   .split img { max-width: 280px; }
   .article { padding: 46px 0; }
   .article figure img { max-width: 280px; }
+  .article figure.feature img { width: 100%; max-width: none; height: auto; }
   section { padding: 46px 0; }
   footer { display: block; }
 }
