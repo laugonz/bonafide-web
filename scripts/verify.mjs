@@ -8,6 +8,7 @@ for (const page of pages) {
   const html = fs.readFileSync(path.join(dist,page),"utf8");
   assert((html.match(/<h1[ >]/g)||[]).length===1, `${page}: expected one H1`);
   assert(html.includes('rel="canonical"'), `${page}: missing canonical`);
+  assert(html.includes('src="/_vercel/insights/script.js"'), `${page}: missing Vercel Web Analytics`);
   for (const item of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) JSON.parse(item[1]);
 }
 const sitemap = fs.readFileSync(path.join(dist,"sitemap.xml"),"utf8");
