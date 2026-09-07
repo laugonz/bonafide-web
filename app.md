@@ -7,7 +7,8 @@
 | Product | Bona Fide: SIE Exam Prep |
 | Audience | Adults preparing for the FINRA Securities Industry Essentials (SIE) exam |
 | Platform | iPhone and iPad |
-| Store status | In App Review on 2026-09-04; App Store URL pending |
+| Store status | Available on the App Store since 2026-09-07 |
+| App Store page | https://apps.apple.com/app/apple-store/id6792458131 |
 | Official exam source | https://www.finra.org/registration-exams-ce/qualification-exams/securities-industry-essentials-exam-sie |
 | Legal pages | https://www.emdrflow.app/bonafide/privacy and `/terms` |
 
@@ -57,5 +58,5 @@
 - Do not imply affiliation with FINRA, official status, financial advice, or a guaranteed pass.
 - State that FINRA's current exam information and outline are authoritative.
 - Keep all product facts in `public/llms.txt` and in visible homepage content.
-- Update `site.config.mjs` with the real App Store URL before deployment. That activates the download links and Smart App Banner.
+- The website CTA uses `/download/web`, a temporary redirect to Apple’s campaign URL. Keep that route and its `ct=bonafide_web_links` token intact so App Store Connect can attribute first-time downloads to the website.
 - Six editorial guide images were generated directly in Codex and saved under `public/assets/guides/`. They are 1536×1024, distinct compositions, and contain no text or logos. Do not replace them with stock images or a made-up product UI.
