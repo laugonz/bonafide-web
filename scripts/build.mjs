@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { site } from "../site.config.mjs";
 import { faqs, guides } from "../src/data.mjs";
+import { legalDocs } from "../src/legal.mjs";
 
 const root = path.resolve(import.meta.dirname, "..");
 const dist = path.join(root, "dist");
@@ -24,9 +25,9 @@ function schema(extra = []) {
   ] });
 }
 
-function shell({ title, description, canonical, jsonld, body, image = "/assets/app-icon.png" }) {
+function shell({ title, description, canonical, jsonld, body, image = "/assets/app-icon.png", lang = "en" }) {
   const smartBanner = site.appStoreId ? `<meta name="apple-itunes-app" content="app-id=${site.appStoreId}">` : "";
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)}</title><meta name="description" content="${esc(description)}"><link rel="canonical" href="${canonical}"><meta property="og:type" content="website"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${absolute(image)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(title)}"><meta name="twitter:description" content="${esc(description)}"><meta name="twitter:image" content="${absolute(image)}">${smartBanner}<link rel="stylesheet" href="/style.css"><link rel="alternate" type="text/plain" href="/llms.txt" title="LLM product facts"><script type="application/ld+json">${jsonld}</script><script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script><script defer src="/_vercel/insights/script.js"></script></head><body>${body}</body></html>`;
+  return `<!doctype html><html lang="${lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)}</title><meta name="description" content="${esc(description)}"><link rel="canonical" href="${canonical}"><meta property="og:type" content="website"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${absolute(image)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(title)}"><meta name="twitter:description" content="${esc(description)}"><meta name="twitter:image" content="${absolute(image)}">${smartBanner}<link rel="stylesheet" href="/style.css"><link rel="alternate" type="text/plain" href="/llms.txt" title="LLM product facts"><script type="application/ld+json">${jsonld}</script><script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script><script defer src="/_vercel/insights/script.js"></script></head><body>${body}</body></html>`;
 }
 
 const nav = `<header class="nav"><a class="brand" href="/"><img src="/assets/app-icon.png" width="42" height="42" alt="">Bona Fide <span>SIE Exam Prep</span></a><nav><a href="/guides/">Study guides</a><a href="${site.legalBase}/privacy">Privacy</a></nav></header>`;
@@ -56,6 +57,29 @@ for (const g of guides) {
   fs.writeFileSync(output, shell({ title:`${g.title} | Bona Fide`, description:g.description, canonical, jsonld:schema([article,breadcrumb,faqSchema]), body, image:`/assets/guides/${g.featureImage}` }));
 }
 
-const urls = ["/", "/guides/", ...guides.map(g=>`/guides/${g.slug}/`)];
+const legalPaths = [];
+for (const [slug, translations] of Object.entries(legalDocs)) {
+  for (const [lang, doc] of Object.entries(translations)) {
+    const prefix = lang === "es" ? "/es" : "";
+    const route = `${prefix}/${slug}/`;
+    const canonical = absolute(route);
+    const otherSlug = slug === "privacy" ? "terms" : "privacy";
+    const otherLabel = legalDocs[otherSlug][lang].title;
+    const alternate = lang === "es" ? `/${slug}/` : `/es/${slug}/`;
+    const body = `<main class="page">${nav}<article class="article legal"><p class="eyebrow">BONA FIDE</p><h1>${esc(doc.title)}</h1><p class="meta">${esc(doc.updated)}</p><nav class="legal-links" aria-label="${lang === "es" ? "Documentos e idioma" : "Documents and language"}"><a href="${prefix}/${otherSlug}/">${esc(otherLabel)}</a><a href="${alternate}" lang="${lang === "es" ? "en" : "es"}" hreflang="${lang === "es" ? "en" : "es"}">${lang === "es" ? "English" : "Español"}</a></nav>${doc.sections.map(s => `<section><h2>${esc(s.heading)}</h2>${s.html}</section>`).join("")}<aside><p>${esc(doc.contactLabel)} <a href="mailto:hello@emdrflow.app">hello@emdrflow.app</a>.</p></aside></article>${footer}</main>`;
+    const output = pagePath(route);
+    fs.mkdirSync(path.dirname(output), { recursive: true });
+    // These documents are fully rendered HTML: no JavaScript needed to read them.
+    const html = shell({ title: `${doc.title} | Bona Fide`, description: `${doc.title} for Bona Fide SIE Exam Prep.`, canonical, jsonld: schema([{ "@type": "WebPage", name: doc.title, url: canonical, inLanguage: lang }]), body, lang });
+    fs.writeFileSync(output, html);
+    legalPaths.push(route);
+  }
+}
+
+const supportBody = `<main class="page">${nav}<article class="article legal"><p class="eyebrow">BONA FIDE SUPPORT</p><h1>How can we help?</h1><p class="lead">For app support, a question correction or help with your subscription, email <a href="mailto:hello@emdrflow.app">hello@emdrflow.app</a>.</p><section><h2>Report a question</h2><p>Include the question text or a screenshot and explain what seems wrong. A link to the relevant official source helps us review it.</p></section><section><h2>Subscription help</h2><p>If you already subscribed, open Bona Fide Settings and choose Restore Purchases. To manage or cancel your plan, open your device's Settings → Apple Account → Subscriptions. Deleting the app does not cancel a subscription.</p></section><section><h2>Study guarantee</h2><p>For registration or a claim under the annual-plan study guarantee, email us. See the <a href="/terms/">Terms of Use</a> for eligibility and deadlines.</p></section><section><h2>Privacy</h2><p>Read our <a href="/privacy/">Privacy Policy</a> or contact us with a privacy request. Please do not include payment-card details in your email.</p></section></article>${footer}</main>`;
+fs.mkdirSync(path.join(dist, "support"), { recursive: true });
+fs.writeFileSync(pagePath("/support/"), shell({ title: "Support | Bona Fide SIE Exam Prep", description: "Contact Bona Fide support for app questions, question corrections and subscription help.", canonical: absolute("/support/"), jsonld: schema([{ "@type": "ContactPage", name: "Bona Fide Support", url: absolute("/support/") }]), body: supportBody }));
+
+const urls = ["/", "/guides/", ...guides.map(g=>`/guides/${g.slug}/`), ...legalPaths, "/support/"];
 fs.writeFileSync(path.join(dist,"sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map(u=>`<url><loc>${site.url}${u}</loc><lastmod>${site.reviewed}</lastmod></url>`).join("")}</urlset>`);
 fs.writeFileSync(path.join(dist,"robots.txt"), `User-agent: *\nAllow: /\n\nUser-agent: OAI-SearchBot\nAllow: /\n\nUser-agent: PerplexityBot\nAllow: /\n\nSitemap: ${site.url}/sitemap.xml\n`);
