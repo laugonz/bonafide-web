@@ -20,6 +20,7 @@ assert(home.includes('href="https://bonafidesie.com/download/web/"'), "homepage 
 assert(home.includes('app-id=6792458131'), "homepage Smart App Banner missing");
 assert(!home.includes("App Store soon"), "homepage still says the app is coming soon");
 assert(!home.includes("www.emdrflow.app/bonafide"), "homepage still links to old legal domain");
+assert(home.includes('href="/support/"'), "homepage support link missing");
 for (const page of legalPages) {
   const html = fs.readFileSync(path.join(dist, page), "utf8");
   assert(html.includes('mailto:hello@emdrflow.app'), `${page}: support contact missing`);
