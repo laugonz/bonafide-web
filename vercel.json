@@ -5,7 +5,7 @@
   "trailingSlash": true,
   "redirects": [
     {
-      "source": "/download/web",
+      "source": "/download/web/",
       "destination": "https://apps.apple.com/app/apple-store/id6792458131?pt=1201782&ct=bonafide_web_links&mt=8",
       "permanent": false
     }

@@ -15,7 +15,7 @@ const sitemap = fs.readFileSync(path.join(dist,"sitemap.xml"),"utf8");
 for (const guide of guides) assert(sitemap.includes(`/guides/${guide.slug}/`), `sitemap missing ${guide.slug}`);
 const home = fs.readFileSync(path.join(dist,"index.html"),"utf8");
 assert(home.includes("FAQPage"), "homepage FAQ schema missing");
-assert(home.includes('href="https://bonafidesie.com/download/web"'), "homepage App Store CTA missing");
+assert(home.includes('href="https://bonafidesie.com/download/web/"'), "homepage App Store CTA missing");
 assert(home.includes('app-id=6792458131'), "homepage Smart App Banner missing");
 assert(!home.includes("App Store soon"), "homepage still says the app is coming soon");
 assert(fs.readFileSync(path.join(dist,"robots.txt"),"utf8").includes("OAI-SearchBot"), "LLM crawler allowance missing");
