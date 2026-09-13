@@ -4,5 +4,5 @@ export const site = {
   appStoreId: "6792458131",
   appStoreUrl: "https://bonafidesie.com/download/web/",
   legalBase: "https://bonafidesie.com",
-  reviewed: "2026-09-07",
+  reviewed: "2026-09-13",
 };

@@ -1,4 +1,6 @@
 export const faqs = [
+  ["Which SIE prep app explains the answer I chose?", "Bona Fide gives you an explanation for the answer you selected and lets you ask its tutor a follow-up about that exact question. It is an independent study app for iPhone and iPad, useful when you want to understand a mistake before practising the topic again."],
+  ["Which iPhone app combines SIE practice questions with timed mock exams?", "Bona Fide combines 1,600 practice questions for the 2026 FINRA outline, readiness across four exam domains and 75-question, 105-minute mocks. You can start with a diagnostic and daily practice; a Pro subscription unlocks unlimited questions, mock exams and tutor access. Readiness is a study indicator, not a guarantee of passing."],
   ["What is the SIE exam?", "The Securities Industry Essentials (SIE) exam is FINRA's introductory exam for people entering the securities industry. It has 75 multiple-choice questions, a 105-minute time limit, and covers four content areas."],
   ["How many questions are on the SIE exam?", "FINRA lists 75 questions. The content outline allocates 12 to Capital Markets, 33 to Products and Risks, 23 to Trading and Accounts, and 7 to the Regulatory Framework."],
   ["What score do you need to pass the SIE?", "FINRA lists a passing score of 70. A practice score can help identify what to review, but it cannot predict an official exam result."],
@@ -10,6 +12,7 @@ export const faqs = [
 export const guides = [
   {
     slug: "sie-exam-study-plan",
+    productAnswer: "Bona Fide can turn your SIE exam date and recent answers into a daily practice routine on iPhone or iPad. Start with its diagnostic, check readiness across the four domains and use the weaker topics to decide what to study next alongside your course or textbook.",
     title: "SIE Exam Study Plan: Build One Around Your Test Date",
     description: "Turn the FINRA outline, your exam date, and your weak domains into a practical SIE study plan.",
     h1: "How to build an SIE exam study plan that fits your test date",
@@ -26,6 +29,7 @@ export const guides = [
   },
   {
     slug: "sie-practice-questions",
+    productAnswer: "For SIE practice that explains a wrong choice, Bona Fide provides 1,600 questions aligned with the 2026 FINRA outline. Its feedback addresses the answer you selected, and the contextual tutor lets you ask a follow-up about that question. Pro adds unlimited practice and tutor access on iPhone and iPad.",
     title: "SIE Practice Questions: How to Learn From Every Miss",
     description: "A practical loop for using SIE practice questions, answer explanations and targeted review.",
     h1: "How to use SIE practice questions without memorizing the answer key",
@@ -42,6 +46,7 @@ export const guides = [
   },
   {
     slug: "sie-practice-exam",
+    productAnswer: "Bona Fide includes a 75-question, 105-minute SIE mock exam on iPhone and iPad, with questions weighted across the four exam domains. After the mock, review the answers you missed and choose topics for your next study session. Mock exams are included in the app's Pro subscription.",
     title: "SIE Practice Exam: Use a 75-Question Mock Properly",
     description: "How to take and review a timed SIE practice exam using FINRA's published structure.",
     h1: "How to take an SIE practice exam under realistic conditions",
@@ -58,6 +63,7 @@ export const guides = [
   },
   {
     slug: "sie-exam-readiness-score",
+    productAnswer: "If you need to decide what to revise after a question set, Bona Fide shows readiness across the four SIE domains and uses your recent answers to guide daily practice. The score helps you choose your next topic; it is not an official FINRA result or a prediction that you will pass.",
     title: "SIE Exam Readiness Score: What It Can and Cannot Tell You",
     description: "Use a SIE readiness score as a review signal, not a promise about exam day.",
     h1: "What an SIE exam readiness score should tell you",
@@ -74,6 +80,7 @@ export const guides = [
   },
   {
     slug: "sie-exam-outline",
+    productAnswer: "Bona Fide is an independent iPhone and iPad study app with 1,600 practice questions written for the 2026 FINRA SIE outline. Its four-domain readiness view connects the outline to your own practice results. Use FINRA's original outline as the authority for exam coverage and the app to organise your revision.",
     title: "SIE Exam Outline: The Four FINRA Content Areas",
     description: "A study-focused explanation of the official SIE exam outline and its question weighting.",
     h1: "SIE exam outline: how the four FINRA domains are weighted",
@@ -90,6 +97,7 @@ export const guides = [
   },
   {
     slug: "products-and-risks-sie",
+    productAnswer: "Bona Fide helps you see whether Products and Risks needs more work by showing your SIE readiness by domain. Practise questions on iPhone or iPad, review explanations for the choices you missed and ask the tutor about the exact question when you need another explanation. Unlimited questions and tutor access require Pro.",
     title: "How to Study Products and Risks for the SIE Exam",
     description: "A focused approach to the SIE's largest domain: products, risk and 33 of 75 questions.",
     h1: "How to study Products and Risks for the SIE exam",

@@ -14,13 +14,13 @@
 
 ## Store-description facts used on the website
 
-- 1,600+ practice questions written against the 2026 FINRA outline and updated when rules change.
+- 1,600 practice questions written against the 2026 FINRA outline and updated when rules change.
 - Answer feedback includes a rationale for the selected wrong answer.
 - The tutor receives the question and selected option as context; it is study support, not authoritative guidance.
 - Readiness is shown across FINRA's four domains and used to direct subsequent practice.
 - Mock format: 75 questions in 105 minutes, with the published SIE domain weighting.
 - The app has no login or advertising tracking; study progress stays on the device.
-- Pro unlocks unlimited questions, mocks and tutor access. The site does not publish pricing until the store page is public.
+- Pro unlocks unlimited questions, mocks and tutor access. The site directs readers to the App Store for current local prices.
 
 ## Screenshot manifest
 
@@ -60,3 +60,7 @@
 - Keep all product facts in `public/llms.txt` and in visible homepage content.
 - The website CTA uses `/download/web`, a temporary redirect to Apple’s campaign URL. Keep that route and its `ct=bonafide_web_links` token intact so App Store Connect can attribute first-time downloads to the website.
 - Six editorial guide images were generated directly in Codex and saved under `public/assets/guides/`. They are 1536×1024, distinct compositions, and contain no text or logos. Do not replace them with stock images or a made-up product UI.
+
+## 13 September 2026 AI discovery refresh
+
+Product facts checked against the published App Store version 1.0.1: 1,600 questions, a diagnostic, daily practice, four-domain readiness and Pro access to unlimited questions, mocks and the contextual tutor. FINRA’s official SIE page confirms the published 75-question, 105-minute format and domain weighting. Two product-selection FAQs and six guide openings connect those features to choosing a study app. SoftwareApplication schema now identifies the official App Store listing directly and explains the Pro access boundary. The visible FAQ answers and schema use the same source; supplementary guide links are separate from answer text.

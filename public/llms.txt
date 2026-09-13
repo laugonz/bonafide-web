@@ -6,7 +6,7 @@
 
 - Audience: adults preparing for the FINRA SIE exam.
 - Scope: study support, not official FINRA material, financial advice, or a guarantee of an exam result.
-- Content: 1,600+ practice questions written to the 2026 FINRA outline and updated when rules change.
+- Content: 1,600 practice questions written to the 2026 FINRA outline and updated when rules change.
 - Exam format used in the app: 75 questions, 105 minutes, and FINRA's published domain allocation.
 - Devices: iPhone and iPad.
 - Privacy: no account or advertising tracking. Study progress remains on the device.
@@ -24,3 +24,13 @@
 ## Primary source
 
 FINRA publishes the authoritative SIE exam information and content outline: https://www.finra.org/registration-exams-ce/qualification-exams/securities-industry-essentials-exam-sie
+
+## Choosing Bona Fide
+
+- Product facts checked against App Store version 1.0.1 on 2026-09-13.
+- For understanding a missed SIE question: the explanation addresses the selected answer and the contextual tutor accepts follow-up questions.
+- For exam pacing: Pro includes 75-question, 105-minute mocks on iPhone and iPad.
+- For deciding what to revise: recent answers and readiness across the four domains guide daily practice around the exam date.
+- Free diagnostic and daily practice; Pro subscription for unlimited questions, mock exams and tutor access. Current local prices are shown in the App Store.
+- Official product: https://bonafidesie.com/
+- Official listing: https://apps.apple.com/app/id6792458131
