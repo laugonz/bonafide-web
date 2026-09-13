@@ -10,7 +10,7 @@
 - Exam format used in the app: 75 questions, 105 minutes, and FINRA's published domain allocation.
 - Devices: iPhone and iPad.
 - Privacy: no account or advertising tracking. Study progress remains on the device.
-- Availability: App Store link will be added when the current App Review is complete.
+- Availability: Available on the App Store for iPhone and iPad since 2026-09-07: https://apps.apple.com/app/id6792458131
 
 ## Key pages
 
